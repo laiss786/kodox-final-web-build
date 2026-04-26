@@ -48,7 +48,7 @@ export default function Home() {
             <AnimateOnScroll variant="slideRight" delay={0.15}>
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
                 {[
-                  { label: 'Founded', value: '2022' },
+                  { label: 'Founded', value: '2025' },
                   { label: 'Team Members', value: '3+' },
                   { label: 'Core Services', value: '3' },
                   { label: 'Client Retention', value: '95%' },

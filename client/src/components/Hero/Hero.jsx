@@ -33,10 +33,9 @@ function Counter({ target, suffix = '', duration = 2000 }) {
 }
 
 const stats = [
-  
   { value: 30, suffix: '+', label: 'Happy Clients' },
   { value: 3, suffix: '', label: 'Core Services' },
-  { value: 2, suffix: '+', label: 'Years Experience' },
+  { value: 1, suffix: '', label: 'Year Since Launch' },
 ];
 
 const serviceIcons = [
@@ -145,8 +144,7 @@ export default function Hero() {
               color: '#94a3b8', maxWidth: 560, marginBottom: '2.5rem', lineHeight: 1.8,
             }}
           >
-            Kodox Technologies builds future-ready digital products — from blazing-fast websites and 
-            strategic marketing campaigns to IoT systems and enterprise IT solutions.
+            Kodox Technologies builds future-ready digital products — from blazing-fast websites and custom web applications to IoT systems and enterprise IT solutions.
           </motion.p>
 
           {/* CTAs */}

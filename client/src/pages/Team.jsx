@@ -43,30 +43,55 @@ function TeamCard({ member, index }) {
         padding: '2rem 2rem 1.5rem',
         display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center',
       }}>
-        {/* Avatar circle */}
-        <div style={{ position: 'relative', marginBottom: '1.25rem' }}>
-          <div style={{
-            width: 80, height: 80, borderRadius: '50%',
-            background: `linear-gradient(135deg, ${member.color}40, ${member.color}80)`,
-            border: `2px solid ${member.color}40`,
-            display: 'flex', alignItems: 'center', justifyContent: 'center',
-            fontFamily: "'Space Grotesk', sans-serif", fontWeight: 700,
-            fontSize: '1.5rem', color: member.color,
-            letterSpacing: '-0.02em',
-          }}>
-            {member.initials}
-          </div>
-          {/* Glow ring */}
-          <motion.div
-            animate={{ scale: [1, 1.15, 1], opacity: [0.3, 0.6, 0.3] }}
-            transition={{ duration: 3, repeat: Infinity, delay: index * 0.4 }}
-            style={{
-              position: 'absolute', inset: -4, borderRadius: '50%',
-              border: `1px solid ${member.color}30`,
-              pointerEvents: 'none',
-            }}
-          />
+              {/* Avatar circle */}
+      <div style={{ position: 'relative', marginBottom: '1.25rem' }}>
+        <div style={{
+          width: 80, height: 80, borderRadius: '50%',
+          border: `2px solid ${member.color}40`,
+          overflow: 'hidden',
+          display: 'flex', alignItems: 'center', justifyContent: 'center',
+          background: `linear-gradient(135deg, ${member.color}40, ${member.color}80)`,
+          fontFamily: "'Space Grotesk', sans-serif", fontWeight: 700,
+          fontSize: '1.5rem', color: member.color,
+          position: 'relative',
+        }}>
+          {/* Initials always render as base layer */}
+          <span style={{ position: 'absolute' }}>{member.initials}</span>
+
+          {/* Photo renders on top if it loads */}
+          {member.photo && (
+            <img
+              src={member.photo}
+              alt={member.name}
+              style={{
+                position: 'absolute',
+                width: '100%',
+                height: '100%',
+                objectFit: 'cover',
+                borderRadius: '50%',
+              }}
+              onError={(e) => {
+                e.target.style.display = 'none';
+                console.error('Photo failed to load:', member.photo);
+              }}
+              onLoad={(e) => {
+                console.log('Photo loaded OK:', member.photo);
+              }}
+            />
+          )}
         </div>
+
+        {/* Glow ring */}
+        <motion.div
+          animate={{ scale: [1, 1.15, 1], opacity: [0.3, 0.6, 0.3] }}
+          transition={{ duration: 3, repeat: Infinity, delay: index * 0.4 }}
+          style={{
+            position: 'absolute', inset: -4, borderRadius: '50%',
+            border: `1px solid ${member.color}30`,
+            pointerEvents: 'none',
+          }}
+        />
+      </div>
 
         {/* Name & Role */}
         <h3 style={{

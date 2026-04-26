@@ -5,12 +5,11 @@ import { Target, Eye, Rocket, Lightbulb, Users, Globe } from 'lucide-react';
 import AnimateOnScroll from '../components/shared/AnimateOnScroll';
 
 const timeline = [
-  { year: '2022', title: 'Founded', desc: 'Kodox Technologies was born from a shared vision — to make world-class digital services accessible to every business.' },
-  { year: '2022', title: 'First 10 Clients', desc: 'Within months of launch, we served our first 10 clients across web development and digital marketing.' },
-  { year: '2023', title: 'IoT Division Launched', desc: 'Expanded into IoT solutions, serving academic projects and early industrial automation clients in Kerala.' },
-  { year: '2023', title: '50+ Projects', desc: 'Crossed 50 delivered projects milestone — with a 95% client retention rate and zero missed deadlines.' },
-  { year: '2024', title: 'IT Solutions Division', desc: 'Launched our full IT solutions arm — custom software, cloud infrastructure, and enterprise support.' },
-  { year: '2025', title: 'Scaling Up', desc: 'Growing our team and expanding services across South India. The journey has just begun.' },
+  { year: 'Mar 2025', title: 'Founded', desc: 'Kodox Technologies was born from a shared vision — to make world-class digital services accessible to every business in Kerala and beyond.' },
+  { year: 'Mar 2025', title: 'First Clients', desc: 'Within weeks of launch, we onboarded our first clients across web development and IT solutions.' },
+  { year: 'Apr 2025', title: 'IoT Division Launched', desc: 'Expanded into IoT solutions, serving academic projects and early industrial automation clients in Kerala.' },
+  { year: 'Jun 2025', title: 'IT Solutions Division', desc: 'Launched our full IT solutions arm — custom software, cloud infrastructure, and enterprise support.' },
+  { year: '2025', title: 'Growing Strong', desc: 'Building our reputation across South India with a focus on quality, reliability, and long-term client partnerships.' },
 ];
 
 const values = [
@@ -24,7 +23,7 @@ export default function About() {
     <>
       <Helmet>
         <title>About — Kodox Technologies</title>
-        <meta name="description" content="Learn about Kodox Technologies — our story, mission, vision, and the passionate team behind Kerala's rising digital solutions company." />
+        <meta name="description" content="Learn about Kodox Technologies — our story, mission, vision, and the passionate founders behind Kerala's rising digital solutions company." />
       </Helmet>
 
       {/* Page Hero */}
@@ -41,8 +40,8 @@ export default function About() {
               Building the <span className="gradient-text">Digital Future</span>
             </h1>
             <p style={{ color: '#94a3b8', maxWidth: 650, margin: '0 auto', fontSize: '1.1rem', lineHeight: 1.8 }}>
-              Kodox Technology is a professional digital solutions company specializing in digital marketing, 
-              web development, IT services, and IoT solutions — empowering businesses to thrive in the digital age.
+              Kodox Technologies is a professional digital solutions company specializing in web development, 
+              IT services, and IoT solutions — empowering businesses to thrive in the digital age.
             </p>
           </motion.div>
         </div>

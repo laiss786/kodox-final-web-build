@@ -6,11 +6,9 @@ const footerLinks = {
   Company: [
     { label: 'About Us', path: '/about' },
     { label: 'Our Team', path: '/team' },
-    { label: 'Portfolio', path: '/portfolio' },
     { label: 'Contact', path: '/contact' },
   ],
   Services: [
-    { label: 'Digital Marketing', path: '/services' },
     { label: 'Web Development', path: '/services' },
     { label: 'IT Solutions', path: '/services' },
     { label: 'IoT Solutions', path: '/services' },

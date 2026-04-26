@@ -7,7 +7,12 @@ export const teamData = [
     bio: 'Visionary leader driving Kodox\'s strategic growth. Passionate about leveraging technology to solve real-world problems.',
     color: '#7c3aed',
     initials: 'ML',
-    social: { linkedin: '#', instagram: '#', portfolio: '#' },
+    photo: '/images/team/lais.jpeg',
+    social: {
+      linkedin: 'https://www.linkedin.com/in/mohammedlais786',   // ← real URL
+      instagram: 'https://www.instagram.com/mhdlais?igsh=MTVpb3FwdGU3NWJ0eA==',    // ← real URL
+      portfolio: 'https://laisportfolio.netlify.app/',              // ← real URL or remove
+    },
   },
   {
     id: 2,
@@ -16,7 +21,12 @@ export const teamData = [
     bio: 'Full-stack architect and tech innovator. Expert in MERN stack, cloud infrastructure, and system design.',
     color: '#06b6d4',
     initials: 'HA',
-    social: { linkedin: '#', portfolio: '#' },
+    photo: '/images/team/hadi.jpeg',
+    social: {
+      linkedin: 'https://www.linkedin.com/in/hadi-afnan-530966359',
+      instagram: 'https://www.instagram.com/haddhiie?igsh=MWV3bTNhbjhtdzdkdA==',  // ← added
+      portfolio: 'https://hadi-afnan.vercel.app/',
+    },
   },
   {
     id: 3,
@@ -25,6 +35,11 @@ export const teamData = [
     bio: 'Full-stack developer and enterprise IT expert. Designs robust, scalable infrastructure and crafts high-performance web applications.',
     color: '#9333ea',
     initials: 'MM',
-    social: { linkedin: '#', portfolio: '#' },
+    photo: '/images/team/muntasir.jpg',
+    social: {
+      linkedin: 'https://www.linkedin.com/in/mohammed-muntasir-t-421855333/',
+      instagram: 'https://www.instagram.com/___muntasir_?igsh=M3Y3OXpheWd5Znk0',  // ← added
+      portfolio: 'https://muntasir-portfolio-deployment.vercel.app/',
+    },
   },
 ];
