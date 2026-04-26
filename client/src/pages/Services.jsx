@@ -19,7 +19,7 @@ export default function Services() {
     <>
       <Helmet>
         <title>Services — Kodox Technologies</title>
-        <meta name="description" content="Kodox Technologies offers digital marketing, web development, IT solutions, and IoT services. Explore our full range of professional digital services." />
+        <meta name="description" content="Kodox Technologies offers web development, IT solutions, and IoT services. Explore our full range of professional digital services." />
       </Helmet>
 
       {/* Page hero */}
@@ -63,7 +63,7 @@ export default function Services() {
           <AnimateOnScroll>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem', justifyContent: 'center' }}>
               {['React.js', 'Node.js', 'MongoDB', 'Express', 'Next.js', 'Python', 'WordPress', 'Arduino',
-                'Raspberry Pi', 'Firebase', 'AWS', 'Google Ads', 'Meta Ads', 'Figma', 'MQTT', 'Docker'].map((tech) => (
+                'Raspberry Pi', 'Firebase', 'AWS', 'Figma', 'MQTT', 'Docker'].map((tech) => (
                 <motion.span
                   key={tech}
                   whileHover={{ scale: 1.08, borderColor: 'rgba(124,58,237,0.5)', color: '#a78bfa' }}
@@ -96,13 +96,6 @@ export default function Services() {
           </AnimateOnScroll>
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '1.5rem', position: 'relative' }}>
-            {/* Connector line (desktop) */}
-            <div style={{
-              position: 'absolute', top: 36, left: '12.5%', right: '12.5%', height: 1,
-              background: 'linear-gradient(90deg, #7c3aed40, #06b6d440)',
-              display: 'none', // shown via CSS
-            }} className="process-line" />
-
             {process.map(({ icon, step, title, desc }, i) => (
               <AnimateOnScroll key={step} delay={i * 0.12} variant="fadeUp">
                 <div className="glass-card" style={{ padding: '2rem', textAlign: 'center', height: '100%' }}>

@@ -1,24 +1,7 @@
 // src/components/Services/ServicesData.js
-import { TrendingUp, Globe, Settings, Cpu } from 'lucide-react';
+import { Globe, Settings, Cpu } from 'lucide-react';
 
 export const servicesData = [
-  {
-    id: 'digital-marketing',
-    icon: TrendingUp,
-    color: '#7c3aed',
-    glow: 'rgba(124,58,237,0.2)',
-    title: 'Digital Marketing',
-    tagline: 'Grow your brand online',
-    description: 'Full-funnel digital marketing strategies that drive real business results — from visibility to conversion.',
-    details: [
-      'Search Engine Optimization (SEO)',
-      'Social Media Marketing & Management',
-      'Google & Meta Ads (PPC)',
-      'Brand Identity & Strategy',
-      'Content Marketing & Copywriting',
-      'Email Marketing Campaigns',
-    ],
-  },
   {
     id: 'web-development',
     icon: Globe,

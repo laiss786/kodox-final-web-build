@@ -2,7 +2,7 @@
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
-import { ArrowRight, Shield, Zap, Users, HeartHandshake, Star, Quote } from 'lucide-react';
+import { ArrowRight, Shield, Zap, Users, HeartHandshake } from 'lucide-react';
 import Hero from '../components/Hero/Hero';
 import ServiceCard from '../components/Services/ServiceCard';
 import { servicesData } from '../components/Services/ServicesData';
@@ -15,18 +15,12 @@ const whyUs = [
   { icon: <HeartHandshake size={20} />, color: '#10b981', title: 'Ongoing Support', desc: 'We don\'t disappear after launch. Long-term partnerships built on transparency and trust.' },
 ];
 
-const testimonials = [
-  { name: 'Rahul Menon', company: 'TechPulse SaaS', text: 'Kodox completely transformed our online presence. Our organic traffic tripled in just 4 months. Exceptional team!', rating: 5 },
-  { name: 'Priya Nair', company: 'ZestMart Grocery', text: 'The e-commerce platform they built handles thousands of orders daily without a hiccup. Best investment we made.', rating: 5 },
-  { name: 'Dr. Anoop K', company: 'ClinicBridge Health', text: 'Their patient portal software saved us hours of admin work every day. Incredibly professional and responsive.', rating: 5 },
-];
-
 export default function Home() {
   return (
     <>
       <Helmet>
         <title>Kodox Technologies — Smart Digital Solutions</title>
-        <meta name="description" content="Kodox Technologies delivers digital marketing, web development, IT solutions, and IoT services. Smart Digital Solutions for a Smarter Future." />
+        <meta name="description" content="Kodox Technologies delivers web development, IT solutions, and IoT services. Smart Digital Solutions for a Smarter Future." />
       </Helmet>
 
       {/* Hero */}
@@ -43,7 +37,7 @@ export default function Home() {
               </h2>
               <p style={{ color: '#94a3b8', lineHeight: 1.8, marginBottom: '1.5rem' }}>
                 Kodox Technology is a professional digital solutions company based in Kerala, India. We specialize in 
-                digital marketing, web development, IT services, and IoT solutions — helping startups and businesses 
+                web development, IT services, and IoT solutions — helping startups and businesses 
                 build a powerful digital presence.
               </p>
               <Link to="/about" className="btn-outline">
@@ -55,8 +49,8 @@ export default function Home() {
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
                 {[
                   { label: 'Founded', value: '2022' },
-                  { label: 'Team Members', value: '6+' },
-                  { label: 'Projects Done', value: '50+' },
+                  { label: 'Team Members', value: '3+' },
+                  { label: 'Core Services', value: '3' },
                   { label: 'Client Retention', value: '95%' },
                 ].map(({ label, value }) => (
                   <div key={label} className="glass-card" style={{ padding: '1.5rem', textAlign: 'center' }}>
@@ -81,7 +75,7 @@ export default function Home() {
             <span className="section-label">What We Do</span>
             <h2 className="section-title">Our Core <span className="gradient-text">Services</span></h2>
             <p className="section-subtitle" style={{ margin: '0 auto' }}>
-              Four pillars of digital excellence — each crafted to deliver measurable impact.
+              Three pillars of digital excellence — each crafted to deliver measurable impact.
             </p>
           </AnimateOnScroll>
 
@@ -119,34 +113,6 @@ export default function Home() {
                   </div>
                   <h3 style={{ fontFamily: "'Space Grotesk', sans-serif", fontWeight: 600, fontSize: '1.05rem', marginBottom: '0.5rem' }}>{title}</h3>
                   <p style={{ color: '#64748b', fontSize: '0.88rem', lineHeight: 1.7 }}>{desc}</p>
-                </div>
-              </AnimateOnScroll>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials */}
-      <section className="section">
-        <div className="container">
-          <AnimateOnScroll style={{ textAlign: 'center', marginBottom: '3rem' }}>
-            <span className="section-label">Client Love</span>
-            <h2 className="section-title">What Our Clients <span className="gradient-text">Say</span></h2>
-          </AnimateOnScroll>
-
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.5rem' }}>
-            {testimonials.map(({ name, company, text, rating }, i) => (
-              <AnimateOnScroll key={name} delay={i * 0.12} variant="scaleUp">
-                <div className="glass-card" style={{ padding: '2rem', height: '100%', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-                  <Quote size={24} style={{ color: '#7c3aed', opacity: 0.6 }} />
-                  <p style={{ color: '#94a3b8', fontSize: '0.9rem', lineHeight: 1.8, flex: 1 }}>"{text}"</p>
-                  <div style={{ display: 'flex', gap: '0.2rem', marginBottom: '0.5rem' }}>
-                    {Array(rating).fill(0).map((_, j) => <Star key={j} size={14} fill="#f59e0b" color="#f59e0b" />)}
-                  </div>
-                  <div>
-                    <div style={{ fontFamily: "'Space Grotesk', sans-serif", fontWeight: 600, fontSize: '0.9rem' }}>{name}</div>
-                    <div style={{ color: '#475569', fontSize: '0.8rem', fontFamily: "'JetBrains Mono', monospace" }}>{company}</div>
-                  </div>
                 </div>
               </AnimateOnScroll>
             ))}

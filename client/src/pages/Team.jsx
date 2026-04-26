@@ -1,7 +1,7 @@
 // src/pages/Team.jsx
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
-import { Linkedin, Github, Instagram, ArrowRight } from 'lucide-react';
+import { Linkedin, Instagram, ArrowRight, Globe } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { teamData } from '../components/Team/TeamData';
 import AnimateOnScroll from '../components/shared/AnimateOnScroll';
@@ -103,19 +103,6 @@ function TeamCard({ member, index }) {
               <Linkedin size={14} />
             </a>
           )}
-          {member.social.github && (
-            <a href={member.social.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub"
-               style={{
-                 width: 34, height: 34, borderRadius: 8,
-                 border: `1px solid ${member.color}25`,
-                 display: 'flex', alignItems: 'center', justifyContent: 'center',
-                 color: '#475569', transition: 'all 0.2s',
-               }}
-               onMouseEnter={(e) => { e.currentTarget.style.color = member.color; e.currentTarget.style.borderColor = member.color; e.currentTarget.style.background = `${member.color}15`; }}
-               onMouseLeave={(e) => { e.currentTarget.style.color = '#475569'; e.currentTarget.style.borderColor = `${member.color}25`; e.currentTarget.style.background = 'transparent'; }}>
-              <Github size={14} />
-            </a>
-          )}
           {member.social.instagram && (
             <a href={member.social.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram"
                style={{
@@ -129,6 +116,19 @@ function TeamCard({ member, index }) {
               <Instagram size={14} />
             </a>
           )}
+          {member.social.portfolio && (
+            <a href={member.social.portfolio} target="_blank" rel="noopener noreferrer" aria-label="Portfolio"
+               style={{
+                 width: 34, height: 34, borderRadius: 8,
+                 border: `1px solid ${member.color}25`,
+                 display: 'flex', alignItems: 'center', justifyContent: 'center',
+                 color: '#475569', transition: 'all 0.2s',
+               }}
+               onMouseEnter={(e) => { e.currentTarget.style.color = member.color; e.currentTarget.style.borderColor = member.color; e.currentTarget.style.background = `${member.color}15`; }}
+               onMouseLeave={(e) => { e.currentTarget.style.color = '#475569'; e.currentTarget.style.borderColor = `${member.color}25`; e.currentTarget.style.background = 'transparent'; }}>
+              <Globe size={14} />
+            </a>
+          )}
         </div>
       </div>
     </motion.div>
@@ -140,7 +140,7 @@ export default function Team() {
     <>
       <Helmet>
         <title>Our Team — Kodox Technologies</title>
-        <meta name="description" content="Meet the passionate team behind Kodox Technologies — designers, developers, marketers, and engineers building the digital future." />
+        <meta name="description" content="Meet the founders behind Kodox Technologies — builders, engineers, and innovators shaping the digital future." />
       </Helmet>
 
       {/* Page hero */}
@@ -152,13 +152,12 @@ export default function Team() {
         }} />
         <div className="container" style={{ position: 'relative', textAlign: 'center' }}>
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
-            <span className="section-label">The Team</span>
+            <span className="section-label">The Founders</span>
             <h1 className="section-title" style={{ fontSize: 'clamp(2.5rem, 5vw, 3.8rem)', marginBottom: '1.5rem' }}>
               Meet the Minds Behind <span className="gradient-text">Kodox</span>
             </h1>
             <p style={{ color: '#94a3b8', maxWidth: 600, margin: '0 auto', fontSize: '1.05rem', lineHeight: 1.8 }}>
-              A passionate collective of developers, marketers, designers, and engineers — united by one goal: 
-              building digital products that actually work.
+              Three founders united by one goal — building digital products that actually work and businesses that actually grow.
             </p>
           </motion.div>
         </div>
@@ -213,8 +212,8 @@ export default function Team() {
                   background: 'linear-gradient(135deg, #7c3aed, #06b6d4)',
                   WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text',
                   marginBottom: '0.5rem',
-                }}>6</div>
-                <div style={{ color: '#94a3b8', marginBottom: '2rem' }}>Core Team Members</div>
+                }}>3</div>
+                <div style={{ color: '#94a3b8', marginBottom: '2rem' }}>Main Founders</div>
                 <div style={{
                   fontFamily: "'Space Grotesk', sans-serif", fontSize: '2rem', fontWeight: 700,
                   background: 'linear-gradient(135deg, #06b6d4, #a78bfa)',

@@ -1,7 +1,7 @@
 // src/components/Hero/Hero.jsx
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { ArrowRight, ChevronDown, Code2, Megaphone, Cpu, Wifi } from 'lucide-react';
+import { ArrowRight, ChevronDown, Code2, Cpu, Wifi } from 'lucide-react';
 import ParticleCanvas from './ParticleCanvas';
 import { useEffect, useState, useRef } from 'react';
 
@@ -33,15 +33,14 @@ function Counter({ target, suffix = '', duration = 2000 }) {
 }
 
 const stats = [
-  { value: 50, suffix: '+', label: 'Projects Delivered' },
+  
   { value: 30, suffix: '+', label: 'Happy Clients' },
-  { value: 4, suffix: '', label: 'Core Services' },
+  { value: 3, suffix: '', label: 'Core Services' },
   { value: 2, suffix: '+', label: 'Years Experience' },
 ];
 
 const serviceIcons = [
   { icon: <Code2 size={16} />, label: 'Web Dev' },
-  { icon: <Megaphone size={16} />, label: 'Marketing' },
   { icon: <Cpu size={16} />, label: 'IT Solutions' },
   { icon: <Wifi size={16} />, label: 'IoT' },
 ];
